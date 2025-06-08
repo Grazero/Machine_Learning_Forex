@@ -1,0 +1,28 @@
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.47      0.30      0.37       300
+           1       0.57      0.73      0.64       384
+
+    accuracy                           0.54       684
+   macro avg       0.52      0.52      0.50       684
+weighted avg       0.53      0.54      0.52       684
+
+
+Feature Importances:
+ma20                 0.067655
+ma50                 0.073142
+rsi                  0.069246
+macd                 0.075982
+stoch                0.070293
+atr                  0.082613
+price_change         0.064276
+candle_range         0.069736
+upper_shadow         0.066904
+lower_shadow         0.066702
+ema20                0.065293
+ema50                0.069642
+close_above_ema20    0.004082
+close_above_ema50    0.005111
+bb_percent           0.071114
+adx                  0.078210
