@@ -22,9 +22,9 @@ input_file_path = os.path.join(FIXED_AGENT_FILES_PATH, INPUT_DATA_FILE_NAME)
 output_file_path = os.path.join(FIXED_AGENT_FILES_PATH, OUTPUT_RESULT_FILE_NAME)
 
 # Path ไปยังโมเดล, Scaler, และ Features List ที่เทรนไว้
-MODEL_PATH = 'xgboost_model_v3_multi_symbol.pkl'
-SCALER_PATH = 'scaler_v3_multi_symbol.pkl'
-FEATURES_LIST_PATH = 'features_list_v3_multi_symbol.pkl' # This file should contain the list of features used during training
+MODEL_PATH = 'xgboost_model_v6_no_symbol_features.pkl'
+SCALER_PATH = 'scaler_v6_no_symbol_features.pkl'
+FEATURES_LIST_PATH = 'features_list_v6_no_symbol_features.pkl' # This file should contain the list of features used during training
 
 # ตัวแปรสำหรับเก็บเวลาการแก้ไขไฟล์ Input ล่าสุด
 LAST_INPUT_FILE_MOD_TIME = 0
@@ -39,7 +39,7 @@ try:
     print(f"✅ Features list '{FEATURES_LIST_PATH}' โหลดสำเร็จ. จำนวน Features: {len(features_list)}")
 except FileNotFoundError as e:
     print(f"❌ ข้อผิดพลาด: ไม่พบไฟล์ที่จำเป็น - {e}. โปรดตรวจสอบว่าไฟล์โมเดล, scaler, และ features list อยู่ในไดเรกทอรีเดียวกันกับสคริปต์นี้.")
-    sys.exit(1) # หยุดการทำงานหากไม่พบไฟล์
+    sys.exit() # หยุดการทำงานหากไม่พบไฟล์
 except Exception as e:
     print(f"❌ ข้อผิดพลาดในการโหลดโมเดลหรือส่วนประกอบ: {e}")
     sys.exit(1) # หยุดการทำงานหากมีข้อผิดพลาดอื่น
