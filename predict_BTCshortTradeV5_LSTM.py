@@ -53,7 +53,7 @@ try:
     print(f"✅ Scaler '{SCALER_PATH}' โหลดสำเร็จ.")
     print(f"✅ Features list '{FEATURES_LIST_PATH}' โหลดสำเร็จ. จำนวน Features: {len(features_list)}")
     print(f"✅ กำหนด LSTM_TIMESTEPS: {LSTM_TIMESTEPS}")
-except FileNotFoundError as e:
+except FileNotFoundError as e:  
     print(f"❌ ข้อผิดพลาด: ไม่พบไฟล์ที่จำเป็น - {e}. โปรดตรวจสอบว่าไฟล์โมเดล, scaler, และ features list อยู่ในไดเรกทอรีเดียวกันกับสคริปต์นี้ หรือระบุ PATH ที่ถูกต้อง.")
     sys.exit() # หยุดการทำงานหากไม่พบไฟล์ที่สำคัญ
 except Exception as e:
